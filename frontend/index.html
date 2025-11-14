@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz Game</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+
+  <!-- Intro Page -->
+  <div id="intro">
+    <h1>🎮 SOMTO FOUNDATION QUIZ GAME!</h1>
+    <p>Test your knowledge in Mathematics, English, and Current Affairs.</p>
+    <p>Each question carries 5 points.</p>
+    <button id="startBtn">Start Quiz</button>
+  </div>
+
+  <!-- Quiz Page -->
+  <div id="quiz" class="hidden">
+    <p id="category"></p>
+    <p id="question"></p>
+    <div id="options"></div>
+    <p id="feedback"></p>
+    <p id="score">Score: 0</p>
+    <div class="nav-buttons">
+      <button id="prevBtn">Previous</button>
+      <button id="nextBtn">Next</button>
+      <button id="quitBtn">Quit Quiz</button>
+    </div>
+  </div>
+
+  <!-- Result Page -->
+  <div id="result" class="hidden">
+    <h2>Quiz Ended!</h2>
+    <p id="finalScore"></p>
+    <button id="restartBtn">Restart Quiz</button>
+  </div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
