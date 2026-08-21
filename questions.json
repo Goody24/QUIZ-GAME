@@ -3,170 +3,655 @@
     {
       "id": 1,
       "category": "Mathematics",
+      "difficulty": "easy",
       "question": "What is 5 + 7?",
       "options": ["A. 10", "B. 12", "C. 14", "D. 11"],
-      "answer": "B"
+      "answer": "B",
+      "explanation": "5 + 7 equals 12."
     },
     {
       "id": 2,
       "category": "Mathematics",
+      "difficulty": "easy",
       "question": "What is 9 × 3?",
       "options": ["A. 27", "B. 24", "C. 21", "D. 30"],
-      "answer": "A"
+      "answer": "A",
+      "explanation": "9 multiplied by 3 is 27."
     },
     {
       "id": 3,
       "category": "Mathematics",
+      "difficulty": "easy",
       "question": "What is the square root of 49?",
       "options": ["A. 7", "B. 8", "C. 6", "D. 9"],
-      "answer": "A"
+      "answer": "A",
+      "explanation": "7 × 7 = 49, so the square root of 49 is 7."
     },
     {
       "id": 4,
       "category": "Mathematics",
+      "difficulty": "easy",
       "question": "What is 15 ÷ 3?",
       "options": ["A. 4", "B. 5", "C. 6", "D. 3"],
-      "answer": "B"
+      "answer": "B",
+      "explanation": "15 divided by 3 equals 5."
     },
     {
       "id": 5,
       "category": "Mathematics",
+      "difficulty": "easy",
       "question": "What is 8 × 7?",
       "options": ["A. 54", "B. 56", "C. 64", "D. 48"],
-      "answer": "B"
+      "answer": "B",
+      "explanation": "8 × 7 = 56."
     },
     {
       "id": 6,
-      "category": "English",
-      "question": "Synonym of 'quick'?",
-      "options": ["A. Slow", "B. Rapid", "C. Lazy", "D. Weak"],
-      "answer": "B"
+      "category": "Mathematics",
+      "difficulty": "medium",
+      "question": "What is 12 × 12?",
+      "options": ["A. 144", "B. 124", "C. 132", "D. 152"],
+      "answer": "A",
+      "explanation": "12 squared (12 × 12) is 144."
     },
     {
       "id": 7,
-      "category": "English",
-      "question": "Antonym of 'happy'?",
-      "options": ["A. Sad", "B. Joyful", "C. Glad", "D. Excited"],
-      "answer": "A"
+      "category": "Mathematics",
+      "difficulty": "easy",
+      "question": "What is 100 ÷ 25?",
+      "options": ["A. 2", "B. 4", "C. 5", "D. 6"],
+      "answer": "B",
+      "explanation": "100 divided by 25 is 4."
     },
     {
       "id": 8,
-      "category": "English",
-      "question": "Choose the correct spelling:",
-      "options": ["A. Recieve", "B. Receive", "C. Recive", "D. Receve"],
-      "answer": "B"
+      "category": "Mathematics",
+      "difficulty": "medium",
+      "question": "Solve for x: 2x + 6 = 18",
+      "options": ["A. 5", "B. 6", "C. 7", "D. 8"],
+      "answer": "B",
+      "explanation": "Subtract 6 from both sides: 2x = 12. Divide by 2: x = 6."
     },
     {
       "id": 9,
-      "category": "English",
-      "question": "Synonym of 'beautiful'?",
-      "options": ["A. Pretty", "B. Ugly", "C. Harsh", "D. Rough"],
-      "answer": "A"
+      "category": "Mathematics",
+      "difficulty": "medium",
+      "question": "What is the value of π (Pi) rounded to two decimal places?",
+      "options": ["A. 3.12", "B. 3.14", "C. 3.16", "D. 3.18"],
+      "answer": "B",
+      "explanation": "Pi is the ratio of a circle's circumference to its diameter, approximately 3.14159... rounded to 3.14."
     },
     {
       "id": 10,
-      "category": "English",
-      "question": "Antonym of 'strong'?",
-      "options": ["A. Weak", "B. Mighty", "C. Solid", "D. Firm"],
-      "answer": "A"
+      "category": "Mathematics",
+      "difficulty": "hard",
+      "question": "What is the sum of interior angles of a hexagon?",
+      "options": ["A. 540°", "B. 720°", "C. 900°", "D. 360°"],
+      "answer": "B",
+      "explanation": "Formula: (n - 2) × 180°. For a hexagon (n = 6): (6 - 2) × 180° = 4 × 180° = 720°."
     },
     {
       "id": 11,
-      "category": "Current Affairs",
-      "question": "Who is the president of the USA in 2025?",
-      "options": ["A. Joe Biden", "B. Kamala Harris", "C. Donald Trump", "D. TBD"],
-      "answer": "C"
+      "category": "Mathematics",
+      "difficulty": "medium",
+      "question": "What is 20% of 150?",
+      "options": ["A. 25", "B. 30", "C. 35", "D. 20"],
+      "answer": "B",
+      "explanation": "20% of 150 = 0.20 × 150 = 30."
     },
     {
       "id": 12,
-      "category": "Current Affairs",
-      "question": "Which country won the 2022 FIFA World Cup?",
-      "options": ["A. Brazil", "B. Argentina", "C. France", "D. Germany"],
-      "answer": "B"
+      "category": "Mathematics",
+      "difficulty": "hard",
+      "question": "What is the next prime number after 29?",
+      "options": ["A. 31", "B. 33", "C. 35", "D. 37"],
+      "answer": "A",
+      "explanation": "31 is only divisible by 1 and itself, making it the prime number directly following 29."
     },
     {
       "id": 13,
-      "category": "Current Affairs",
-      "question": "UN headquarters is located in?",
-      "options": ["A. Geneva", "B. New York", "C. Paris", "D. London"],
-      "answer": "B"
+      "category": "English",
+      "difficulty": "easy",
+      "question": "What is the synonym of 'quick'?",
+      "options": ["A. Slow", "B. Rapid", "C. Lazy", "D. Weak"],
+      "answer": "B",
+      "explanation": "'Rapid' means moving or acting with great speed, synonymous with 'quick'."
     },
     {
       "id": 14,
-      "category": "Current Affairs",
-      "question": "Who is the Secretary-General of UN (2025)?",
-      "options": ["A. António Guterres", "B. Ban Ki-moon", "C. Kofi Annan", "D. Ursula von der Leyen"],
-      "answer": "A"
+      "category": "English",
+      "difficulty": "easy",
+      "question": "What is the antonym of 'happy'?",
+      "options": ["A. Sad", "B. Joyful", "C. Glad", "D. Excited"],
+      "answer": "A",
+      "explanation": "'Sad' is the opposite (antonym) of 'happy'."
     },
     {
       "id": 15,
-      "category": "Current Affairs",
-      "question": "Which country recently landed a rover on the Moon?",
-      "options": ["A. India", "B. USA", "C. China", "D. Russia"],
-      "answer": "C"
+      "category": "English",
+      "difficulty": "easy",
+      "question": "Choose the correct spelling:",
+      "options": ["A. Recieve", "B. Receive", "C. Recive", "D. Receve"],
+      "answer": "B",
+      "explanation": "Remember the rule 'i before e except after c': 'Receive' is correct."
     },
     {
       "id": 16,
-      "category": "Mathematics",
-      "question": "What is 12 × 12?",
-      "options": ["A. 144", "B. 124", "C. 132", "D. 152"],
-      "answer": "A"
+      "category": "English",
+      "difficulty": "easy",
+      "question": "What is the synonym of 'beautiful'?",
+      "options": ["A. Pretty", "B. Ugly", "C. Harsh", "D. Rough"],
+      "answer": "A",
+      "explanation": "'Pretty' is a direct synonym for 'beautiful'."
     },
     {
       "id": 17,
-      "category": "Mathematics",
-      "question": "What is 100 ÷ 25?",
-      "options": ["A. 2", "B. 4", "C. 5", "D. 6"],
-      "answer": "C"
+      "category": "English",
+      "difficulty": "easy",
+      "question": "What is the antonym of 'strong'?",
+      "options": ["A. Weak", "B. Mighty", "C. Solid", "D. Firm"],
+      "answer": "A",
+      "explanation": "'Weak' denotes lacking physical power, the opposite of 'strong'."
     },
     {
       "id": 18,
       "category": "English",
+      "difficulty": "easy",
       "question": "Choose the correct word: 'She ___ to school daily.'",
       "options": ["A. go", "B. goes", "C. going", "D. gone"],
-      "answer": "B"
+      "answer": "B",
+      "explanation": "Third-person singular present tense requires 'goes' ('She goes')."
     },
     {
       "id": 19,
       "category": "English",
+      "difficulty": "easy",
       "question": "Fill in the blank: 'He is ___ than me.'",
       "options": ["A. tall", "B. taller", "C. tallest", "D. more tall"],
-      "answer": "B"
+      "answer": "B",
+      "explanation": "Comparative adjective for one-syllable word 'tall' is 'taller'."
     },
     {
       "id": 20,
-      "category": "Current Affairs",
-      "question": "Which country hosted the 2024 Summer Olympics?",
-      "options": ["A. Japan", "B. USA", "C. France", "D. Germany"],
-      "answer": "C"
+      "category": "English",
+      "difficulty": "medium",
+      "question": "What does the idiom 'bite the bullet' mean?",
+      "options": ["A. To eat quickly", "B. To endure a painful situation bravely", "C. To make a loud noise", "D. To start a conflict"],
+      "answer": "B",
+      "explanation": "'Bite the bullet' means to face a difficult situation with courage and fortitude."
     },
     {
       "id": 21,
-      "category":"Current Affairs",
-      "question": "How much additional domestic borrowing did Nigeria’s National Assembly approve to cover its 2025 budget gap?",
-      "options": ["A. ₦500 billion", "B. ₦1.15 trillion", "C. ₦2 trillion", "D. ₦750 billion"],
-      "answer": "B"
-    }, 
-     {
+      "category": "English",
+      "difficulty": "medium",
+      "question": "Identify the figure of speech: 'The wind whispered through the trees.'",
+      "options": ["A. Simile", "B. Personification", "C. Hyperbole", "D. Metaphor"],
+      "answer": "B",
+      "explanation": "Attributing human qualities ('whispering') to an inanimate object ('wind') is personification."
+    },
+    {
       "id": 22,
-      "category":"Current Affairs",
-      "question": "What controversial issue disrupted the opening of the Museum of West African Art (MOWAA) in Benin City?",
-      "options": ["A. Lack of funding", "B) Protests over looted Benin Bronzes", "C) Architectural safety concerns", "D) Visa issues for foreign cur"],
-      "answer": "B"
-    }, 
+      "category": "English",
+      "difficulty": "medium",
+      "question": "Choose the correctly punctuated sentence:",
+      "options": [
+        "A. Its a lovely day, isn't it?",
+        "B. It's a lovely day, isn't it?",
+        "C. Its' a lovely day, isnt it?",
+        "D. It's a lovely day isn't it"
+      ],
+      "answer": "B",
+      "explanation": "'It's' is the contraction of 'It is', and the question tag requires an apostrophe and question mark."
+    },
     {
       "id": 23,
-      "category":"Current Affairs",
-      "question": "What raw commodity did Nigeria ban from export for six months in 2025 to boost local processing?",
-      "options": ["A) Cocoa beans","B) Raw shea nuts", "C) Crude oil", "D) Sesame seed"],
-      "answer": "B"
-    }, 
-     {
+      "category": "English",
+      "difficulty": "hard",
+      "question": "What is the meaning of the word 'ephemeral'?",
+      "options": ["A. Eternal and everlasting", "B. Lasting for a very short time", "C. Extremely heavy", "D. Bright and colorful"],
+      "answer": "B",
+      "explanation": "'Ephemeral' describes things that are fleeting or short-lived."
+    },
+    {
       "id": 24,
-      "category":"Current Affairs",
-      "question": "What was the result of the clash between Boko Haram and ISWAP in the Lake Chad region in November 2025?",
-      "options": ["A) ISWAP repelled Boko Haram", "B) Both parties signed a peace deal", "C) Boko Haram overran several ISWAP bases", "D) The UN intervened to stop the fighting"],
-      "answer": "C"
+      "category": "English",
+      "difficulty": "hard",
+      "question": "Which of the following is an example of an oxymoron?",
+      "options": ["A. Silent scream", "B. Fast runner", "C. Bright sunshine", "D. Cold ice"],
+      "answer": "A",
+      "explanation": "An oxymoron pairs contradictory terms together, like 'silent' and 'scream'."
+    },
+    {
+      "id": 25,
+      "category": "Science & Nature",
+      "difficulty": "easy",
+      "question": "What is the chemical symbol for Water?",
+      "options": ["A. CO2", "B. H2O", "C. NaCl", "D. O2"],
+      "answer": "B",
+      "explanation": "Water consists of two hydrogen atoms bonded to one oxygen atom: H2O."
+    },
+    {
+      "id": 26,
+      "category": "Science & Nature",
+      "difficulty": "easy",
+      "question": "Which planet is known as the Red Planet?",
+      "options": ["A. Venus", "B. Mars", "C. Jupiter", "D. Mercury"],
+      "answer": "B",
+      "explanation": "Mars appears reddish due to the high concentration of iron oxide (rust) on its surface."
+    },
+    {
+      "id": 27,
+      "category": "Science & Nature",
+      "difficulty": "easy",
+      "question": "What is the powerhouse of the cell?",
+      "options": ["A. Nucleus", "B. Mitochondria", "C. Ribosome", "D. Endoplasmic Reticulum"],
+      "answer": "B",
+      "explanation": "Mitochondria generate most of the chemical energy (ATP) needed by the cell."
+    },
+    {
+      "id": 28,
+      "category": "Science & Nature",
+      "difficulty": "medium",
+      "question": "What gas do plants absorb during photosynthesis?",
+      "options": ["A. Oxygen", "B. Carbon Dioxide", "C. Nitrogen", "D. Hydrogen"],
+      "answer": "B",
+      "explanation": "Plants take in Carbon Dioxide (CO2) and release Oxygen (O2) during photosynthesis."
+    },
+    {
+      "id": 29,
+      "category": "Science & Nature",
+      "difficulty": "medium",
+      "question": "What is the speed of light in a vacuum approximately?",
+      "options": ["A. 150,000 km/s", "B. 300,000 km/s", "C. 500,000 km/s", "D. 1,000,000 km/s"],
+      "answer": "B",
+      "explanation": "The speed of light in a vacuum is approximately 299,792 km/s (~300,000 km/s)."
+    },
+    {
+      "id": 30,
+      "category": "Science & Nature",
+      "difficulty": "medium",
+      "question": "What is the most abundant gas in Earth's atmosphere?",
+      "options": ["A. Oxygen", "B. Nitrogen", "C. Carbon Dioxide", "D. Argon"],
+      "answer": "B",
+      "explanation": "Nitrogen makes up about 78% of Earth's atmosphere, followed by Oxygen at around 21%."
+    },
+    {
+      "id": 31,
+      "category": "Science & Nature",
+      "difficulty": "hard",
+      "question": "What is the pH level of pure distilled water at 25°C?",
+      "options": ["A. 5", "B. 7", "C. 9", "D. 14"],
+      "answer": "B",
+      "explanation": "Pure water is neutral on the pH scale, possessing a pH value of exactly 7."
+    },
+    {
+      "id": 32,
+      "category": "Science & Nature",
+      "difficulty": "hard",
+      "question": "Which particle in an atom carries a positive electrical charge?",
+      "options": ["A. Electron", "B. Proton", "C. Neutron", "D. Photon"],
+      "answer": "B",
+      "explanation": "Protons have a positive charge (+1), electrons are negative (-1), and neutrons are neutral (0)."
+    },
+    {
+      "id": 33,
+      "category": "Science & Nature",
+      "difficulty": "medium",
+      "question": "Which organ in the human body produces insulin?",
+      "options": ["A. Liver", "B. Pancreas", "C. Kidney", "D. Heart"],
+      "answer": "B",
+      "explanation": "The beta cells of the pancreas synthesize and secrete insulin to regulate blood sugar."
+    },
+    {
+      "id": 34,
+      "category": "Science & Nature",
+      "difficulty": "hard",
+      "question": "What is the hardest naturally occurring mineral on Earth?",
+      "options": ["A. Quartz", "B. Diamond", "C. Topaz", "D. Corundum"],
+      "answer": "B",
+      "explanation": "Diamond rates 10 on the Mohs hardness scale, making it the hardest natural mineral."
+    },
+    {
+      "id": 35,
+      "category": "Science & Nature",
+      "difficulty": "easy",
+      "question": "How many bones are in the adult human skeleton?",
+      "options": ["A. 186", "B. 206", "C. 226", "D. 250"],
+      "answer": "B",
+      "explanation": "An adult human has 206 bones after several infant bones fuse during growth."
+    },
+    {
+      "id": 36,
+      "category": "Science & Nature",
+      "difficulty": "medium",
+      "question": "What causes the tides in Earth's oceans?",
+      "options": ["A. Earth's magnetic field", "B. Gravitational pull of the Moon and Sun", "C. Wind currents", "D. Underwater earthquakes"],
+      "answer": "B",
+      "explanation": "Ocean tides are caused primarily by the gravitational pull exerted by the Moon and the Sun."
+    },
+    {
+      "id": 37,
+      "category": "Technology & Computing",
+      "difficulty": "easy",
+      "question": "What does 'CPU' stand for in computing?",
+      "options": ["A. Central Process Unit", "B. Central Processing Unit", "C. Computer Personal User", "D. Core Power Unit"],
+      "answer": "B",
+      "explanation": "CPU stands for Central Processing Unit, the primary component executing instructions."
+    },
+    {
+      "id": 38,
+      "category": "Technology & Computing",
+      "difficulty": "easy",
+      "question": "Which programming language is known as the backbone of web interactivity?",
+      "options": ["A. Python", "B. JavaScript", "C. C++", "D. Rust"],
+      "answer": "B",
+      "explanation": "JavaScript is the native programming language of all modern web browsers."
+    },
+    {
+      "id": 39,
+      "category": "Technology & Computing",
+      "difficulty": "easy",
+      "question": "What does 'HTTP' stand for?",
+      "options": ["A. HyperText Transfer Protocol", "B. HyperText Transmission Program", "C. High Tech Transfer Process", "D. Hyper Terminal Text Package"],
+      "answer": "A",
+      "explanation": "HTTP stands for HyperText Transfer Protocol, the protocol used for transmitting web pages."
+    },
+    {
+      "id": 40,
+      "category": "Technology & Computing",
+      "difficulty": "medium",
+      "question": "What binary number represents the decimal value 5?",
+      "options": ["A. 0100", "B. 0101", "C. 0110", "D. 0111"],
+      "answer": "B",
+      "explanation": "In binary: (1 × 4) + (0 × 2) + (1 × 1) = 4 + 1 = 5 (0101 in 4-bit binary)."
+    },
+    {
+      "id": 41,
+      "category": "Technology & Computing",
+      "difficulty": "medium",
+      "question": "Who is widely considered the father of computer science?",
+      "options": ["A. Bill Gates", "B. Alan Turing", "C. Steve Jobs", "D. Charles Babbage"],
+      "answer": "B",
+      "explanation": "Alan Turing developed theoretical foundations for computers and algorithms (Turing machines)."
+    },
+    {
+      "id": 42,
+      "category": "Technology & Computing",
+      "difficulty": "medium",
+      "question": "What does 'RAM' stand for?",
+      "options": ["A. Read Access Memory", "B. Random Access Memory", "C. Rapid Action Module", "D. Real-time Array Matrix"],
+      "answer": "B",
+      "explanation": "RAM stands for Random Access Memory, high-speed volatile working memory."
+    },
+    {
+      "id": 43,
+      "category": "Technology & Computing",
+      "difficulty": "hard",
+      "question": "What is the time complexity of searching a sorted array using Binary Search?",
+      "options": ["A. O(n)", "B. O(log n)", "C. O(n log n)", "D. O(1)"],
+      "answer": "B",
+      "explanation": "Binary search halves the search space at each step, yielding O(log n) time complexity."
+    },
+    {
+      "id": 44,
+      "category": "Technology & Computing",
+      "difficulty": "medium",
+      "question": "Which data structure follows the First-In, First-Out (FIFO) principle?",
+      "options": ["A. Stack", "B. Queue", "C. Binary Tree", "D. Hash Map"],
+      "answer": "B",
+      "explanation": "A Queue processes elements in the order they arrived (FIFO: First-In, First-Out)."
+    },
+    {
+      "id": 45,
+      "category": "Technology & Computing",
+      "difficulty": "hard",
+      "question": "What does 'API' stand for in software engineering?",
+      "options": ["A. Application Programming Interface", "B. Automated Protocol Integration", "C. Applied Program Instructions", "D. Array Processing Interface"],
+      "answer": "A",
+      "explanation": "API stands for Application Programming Interface, allowing different applications to communicate."
+    },
+    {
+      "id": 46,
+      "category": "Technology & Computing",
+      "difficulty": "easy",
+      "question": "Which company originally developed the Android operating system before Google acquired it?",
+      "options": ["A. Apple", "B. Android Inc.", "C. Microsoft", "D. Nokia"],
+      "answer": "B",
+      "explanation": "Android Inc. was co-founded by Andy Rubin in 2003 and acquired by Google in 2005."
+    },
+    {
+      "id": 47,
+      "category": "Technology & Computing",
+      "difficulty": "medium",
+      "question": "Which port is standard for HTTPS encrypted web traffic?",
+      "options": ["A. 80", "B. 443", "C. 8080", "D. 22"],
+      "answer": "B",
+      "explanation": "Port 443 is the standard default TCP port for secure HTTPS traffic (HTTP is port 80)."
+    },
+    {
+      "id": 48,
+      "category": "Technology & Computing",
+      "difficulty": "hard",
+      "question": "What does 'SQL' stand for?",
+      "options": ["A. Structured Query Language", "B. System Quality Logic", "C. Sequential Query List", "D. Standard Question Link"],
+      "answer": "A",
+      "explanation": "SQL stands for Structured Query Language, used to query relational databases."
+    },
+    {
+      "id": 49,
+      "category": "World History & Geography",
+      "difficulty": "easy",
+      "question": "What is the capital city of France?",
+      "options": ["A. Madrid", "B. Paris", "C. Rome", "D. Berlin"],
+      "answer": "B",
+      "explanation": "Paris is the capital and most populous city of France."
+    },
+    {
+      "id": 50,
+      "category": "World History & Geography",
+      "difficulty": "easy",
+      "question": "Which is the largest ocean on planet Earth?",
+      "options": ["A. Atlantic Ocean", "B. Pacific Ocean", "C. Indian Ocean", "D. Arctic Ocean"],
+      "answer": "B",
+      "explanation": "The Pacific Ocean covers more than 30% of the Earth's surface area."
+    },
+    {
+      "id": 51,
+      "category": "World History & Geography",
+      "difficulty": "medium",
+      "question": "In which year did World War II end?",
+      "options": ["A. 1918", "B. 1945", "C. 1939", "D. 1950"],
+      "answer": "B",
+      "explanation": "World War II concluded in 1945 with the surrender of Axis forces."
+    },
+    {
+      "id": 52,
+      "category": "World History & Geography",
+      "difficulty": "medium",
+      "question": "Which ancient wonder of the world was located in Alexandria, Egypt?",
+      "options": ["A. Hanging Gardens", "B. Lighthouse of Alexandria", "C. Colossus of Rhodes", "D. Temple of Artemis"],
+      "answer": "B",
+      "explanation": "The Pharos (Lighthouse) of Alexandria was constructed during the Ptolemaic Kingdom."
+    },
+    {
+      "id": 53,
+      "category": "World History & Geography",
+      "difficulty": "easy",
+      "question": "What is the longest river in the world?",
+      "options": ["A. Amazon River", "B. Nile River", "C. Yangtze River", "D. Mississippi River"],
+      "answer": "B",
+      "explanation": "The Nile River in northeastern Africa is traditionally considered the world's longest river (~6,650 km)."
+    },
+    {
+      "id": 54,
+      "category": "World History & Geography",
+      "difficulty": "medium",
+      "question": "Mount Everest is located in which mountain range?",
+      "options": ["A. Andes", "B. Himalayas", "C. Alps", "D. Rockies"],
+      "answer": "B",
+      "explanation": "Mount Everest, Earth's highest peak above sea level, is in the Himalayas on the Nepal-China border."
+    },
+    {
+      "id": 55,
+      "category": "World History & Geography",
+      "difficulty": "hard",
+      "question": "Who was the first Emperor of a unified China (Qin Dynasty)?",
+      "options": ["A. Sun Tzu", "B. Qin Shi Huang", "C. Kublai Khan", "D. Confucius"],
+      "answer": "B",
+      "explanation": "Qin Shi Huang unified China in 221 BC and established the Qin dynasty, also commissioning the Terracotta Army."
+    },
+    {
+      "id": 56,
+      "category": "World History & Geography",
+      "difficulty": "medium",
+      "question": "Which country has the largest land area in the world?",
+      "options": ["A. Canada", "B. Russia", "C. China", "D. United States"],
+      "answer": "B",
+      "explanation": "Russia spans over 17 million square kilometers, making it the largest country by area."
+    },
+    {
+      "id": 57,
+      "category": "World History & Geography",
+      "difficulty": "hard",
+      "question": "What was the capital of the Byzantine Empire?",
+      "options": ["A. Rome", "B. Constantinople", "C. Athens", "D. Alexandria"],
+      "answer": "B",
+      "explanation": "Constantinople (modern-day Istanbul) was the historic capital of the Byzantine Empire."
+    },
+    {
+      "id": 58,
+      "category": "World History & Geography",
+      "difficulty": "easy",
+      "question": "Which continent contains the Sahara Desert?",
+      "options": ["A. Asia", "B. Africa", "C. South America", "D. Australia"],
+      "answer": "B",
+      "explanation": "The Sahara Desert is located in North Africa and is the largest hot desert in the world."
+    },
+    {
+      "id": 59,
+      "category": "World History & Geography",
+      "difficulty": "medium",
+      "question": "Which treaty formally ended World War I in 1919?",
+      "options": ["A. Treaty of Paris", "B. Treaty of Versailles", "C. Treaty of Ghent", "D. Treaty of Rome"],
+      "answer": "B",
+      "explanation": "The Treaty of Versailles was signed on June 28, 1919, officially ending World War I."
+    },
+    {
+      "id": 60,
+      "category": "World History & Geography",
+      "difficulty": "hard",
+      "question": "Which country is home to the ancient Incan citadel of Machu Picchu?",
+      "options": ["A. Chile", "B. Peru", "C. Bolivia", "D. Colombia"],
+      "answer": "B",
+      "explanation": "Machu Picchu is a 15th-century Inca citadel located in the Eastern Cordillera of southern Peru."
+    },
+    {
+      "id": 61,
+      "category": "Current Affairs & GK",
+      "difficulty": "easy",
+      "question": "Where is the headquarters of the United Nations located?",
+      "options": ["A. Geneva", "B. New York City", "C. Paris", "D. London"],
+      "answer": "B",
+      "explanation": "The United Nations international headquarters is situated in Manhattan, New York City."
+    },
+    {
+      "id": 62,
+      "category": "Current Affairs & GK",
+      "difficulty": "easy",
+      "question": "Which country won the 2022 FIFA World Cup in Qatar?",
+      "options": ["A. Brazil", "B. Argentina", "C. France", "D. Germany"],
+      "answer": "B",
+      "explanation": "Argentina defeated France in a penalty shootout in the thrilling 2022 FIFA World Cup Final."
+    },
+    {
+      "id": 63,
+      "category": "Current Affairs & GK",
+      "difficulty": "easy",
+      "question": "Which city hosted the 2024 Summer Olympic Games?",
+      "options": ["A. Tokyo", "B. Paris", "C. Los Angeles", "D. London"],
+      "answer": "B",
+      "explanation": "Paris hosted the XXXIII Olympic Summer Games in July-August 2024."
+    },
+    {
+      "id": 64,
+      "category": "Current Affairs & GK",
+      "difficulty": "medium",
+      "question": "Who serves as the Secretary-General of the United Nations?",
+      "options": ["A. António Guterres", "B. Ban Ki-moon", "C. Tedros Adhanom", "D. Ursula von der Leyen"],
+      "answer": "A",
+      "explanation": "António Guterres of Portugal has served as UN Secretary-General since 2017."
+    },
+    {
+      "id": 65,
+      "category": "Current Affairs & GK",
+      "difficulty": "medium",
+      "question": "Which space agency successfully landed the Chandrayaan-3 rover near the Moon's South Pole in 2023?",
+      "options": ["A. NASA", "B. ISRO (India)", "C. ESA (Europe)", "D. CNSA (China)"],
+      "answer": "B",
+      "explanation": "India's space agency ISRO accomplished the historic lunar south pole landing with Chandrayaan-3."
+    },
+    {
+      "id": 66,
+      "category": "Current Affairs & GK",
+      "difficulty": "easy",
+      "question": "How many players are on the pitch for one team in a standard soccer match?",
+      "options": ["A. 9", "B. 11", "C. 10", "D. 12"],
+      "answer": "B",
+      "explanation": "Each football (soccer) team has 11 players on the field, including the goalkeeper."
+    },
+    {
+      "id": 67,
+      "category": "Current Affairs & GK",
+      "difficulty": "medium",
+      "question": "What is the currency of Japan?",
+      "options": ["A. Yuan", "B. Yen", "C. Won", "D. Baht"],
+      "answer": "B",
+      "explanation": "The Japanese Yen (¥) is the official currency of Japan."
+    },
+    {
+      "id": 68,
+      "category": "Current Affairs & GK",
+      "difficulty": "medium",
+      "question": "What award is given annually in Sweden and Norway for outstanding achievements in physics, chemistry, medicine, literature, peace, and economics?",
+      "options": ["A. Pulitzer Prize", "B. Nobel Prize", "C. Fields Medal", "D. Turing Award"],
+      "answer": "B",
+      "explanation": "The Nobel Prizes were established by the 1895 will of Alfred Nobel."
+    },
+    {
+      "id": 69,
+      "category": "Current Affairs & GK",
+      "difficulty": "hard",
+      "question": "What major cultural institution opened in Benin City, Nigeria, to celebrate West African heritage?",
+      "options": ["A. Louvre West", "B. Museum of West African Art (MOWAA)", "C. Pan-African Smithsonian", "D. African Heritage Institute"],
+      "answer": "B",
+      "explanation": "MOWAA (Museum of West African Art) in Benin City was designed to celebrate historical and contemporary West African art and culture."
+    },
+    {
+      "id": 70,
+      "category": "Current Affairs & GK",
+      "difficulty": "medium",
+      "question": "Which country is the newest member to join NATO in 2024?",
+      "options": ["A. Finland", "B. Sweden", "C. Ukraine", "D. Georgia"],
+      "answer": "B",
+      "explanation": "Sweden officially joined NATO in March 2024 as its 32nd member state, following Finland in 2023."
+    },
+    {
+      "id": 71,
+      "category": "Current Affairs & GK",
+      "difficulty": "hard",
+      "question": "Which international trade agreement covers the majority of African nations to form a unified continental market?",
+      "options": ["A. ECOWAS Free Trade", "B. AfCFTA (African Continental Free Trade Area)", "C. African Economic Pact", "D. Pan-African Union"],
+      "answer": "B",
+      "explanation": "AfCFTA creates the largest free trade area in the world by number of participating countries."
+    },
+    {
+      "id": 72,
+      "category": "Current Affairs & GK",
+      "difficulty": "easy",
+      "question": "Who painted the world-famous masterpiece known as the 'Mona Lisa'?",
+      "options": ["A. Vincent van Gogh", "B. Leonardo da Vinci", "C. Michelangelo", "D. Pablo Picasso"],
+      "answer": "B",
+      "explanation": "Leonardo da Vinci painted the Mona Lisa in the early 16th century, exhibited at the Louvre."
     }
   ]
 }

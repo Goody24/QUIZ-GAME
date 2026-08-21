@@ -1,44 +1,463 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Quiz Game</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="QuizVerse - An interactive, modern, gamified quiz challenge across Mathematics, Science, English, Technology, and History.">
+  <title>QuizVerse | Ultimate Knowledge Challenge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container">
+  <!-- Background Glow & Particles Canvas -->
+  <div class="bg-mesh"></div>
+  <canvas id="confettiCanvas"></canvas>
 
-  <!-- Intro Page -->
-  <div id="intro">
-    <h1>🎮 SOMTO FOUNDATION QUIZ GAME!</h1>
-    <p>Test your knowledge in Mathematics, English, and Current Affairs.</p>
-    <p>Each question carries 5 points.</p>
-    <button id="startBtn">Start Quiz</button>
-  </div>
+  <!-- App Shell -->
+  <div class="app-container">
+    
+    <!-- Top Header -->
+    <header class="app-header">
+      <div class="brand" id="brandLogo">
+        <div class="brand-icon">⚡</div>
+        <div class="brand-text">
+          <span class="brand-title">QUIZ<span class="brand-highlight">VERSE</span></span>
+          <span class="brand-subtitle">Knowledge Arena</span>
+        </div>
+      </div>
 
-  <!-- Quiz Page -->
-  <div id="quiz" class="hidden">
-    <p id="category"></p>
-    <p id="question"></p>
-    <div id="options"></div>
-    <p id="feedback"></p>
-    <p id="score">Score: 0</p>
-    <div class="nav-buttons">
-      <button id="prevBtn">Previous</button>
-      <button id="nextBtn">Next</button>
-      <button id="quitBtn">Quit Quiz</button>
+      <div class="header-actions">
+        <button id="leaderboardBtn" class="icon-btn" title="View Leaderboard" aria-label="Leaderboard">
+          <span class="btn-icon">🏆</span>
+          <span class="btn-label">Scores</span>
+        </button>
+        <button id="soundToggleBtn" class="icon-btn" title="Toggle Audio Sound" aria-label="Toggle Sound">
+          <span id="soundIcon" class="btn-icon">🔊</span>
+        </button>
+        <button id="helpBtn" class="icon-btn" title="How to Play" aria-label="Help">
+          <span class="btn-icon">❓</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Content Stage -->
+    <main class="main-stage">
+      
+      <!-- ============================================ -->
+      <!-- VIEW 1: LOBBY / SETUP SCREEN                 -->
+      <!-- ============================================ -->
+      <section id="lobbyView" class="view-panel active">
+        <div class="hero-section">
+          <div class="hero-pill">🔥 70+ Curated Questions Across 6 Domains</div>
+          <h1 class="hero-title">Test Your Intellect & Rise to the Top</h1>
+          <p class="hero-desc">Choose your topic, select your challenge mode, and earn streaks, combos, and badges in real-time.</p>
+        </div>
+
+        <div class="setup-grid">
+          
+          <!-- Category Selector -->
+          <div class="setup-card">
+            <div class="card-header">
+              <span class="section-badge">Step 1</span>
+              <h3>Choose Category</h3>
+            </div>
+            <div class="category-grid" id="categoryGrid">
+              <button class="cat-chip active" data-category="All">
+                <span class="cat-icon">🌟</span>
+                <div class="cat-info">
+                  <span class="cat-name">All Categories</span>
+                  <span class="cat-sub">Mixed Challenge</span>
+                </div>
+              </button>
+              <button class="cat-chip" data-category="Mathematics">
+                <span class="cat-icon">🧮</span>
+                <div class="cat-info">
+                  <span class="cat-name">Mathematics</span>
+                  <span class="cat-sub">Arithmetic & Logic</span>
+                </div>
+              </button>
+              <button class="cat-chip" data-category="English">
+                <span class="cat-icon">📖</span>
+                <div class="cat-info">
+                  <span class="cat-name">English</span>
+                  <span class="cat-sub">Grammar & Vocab</span>
+                </div>
+              </button>
+              <button class="cat-chip" data-category="Science & Nature">
+                <span class="cat-icon">🔬</span>
+                <div class="cat-info">
+                  <span class="cat-name">Science & Nature</span>
+                  <span class="cat-sub">Physics & Biology</span>
+                </div>
+              </button>
+              <button class="cat-chip" data-category="Technology & Computing">
+                <span class="cat-icon">💻</span>
+                <div class="cat-info">
+                  <span class="cat-name">Technology</span>
+                  <span class="cat-sub">Coding & Tech</span>
+                </div>
+              </button>
+              <button class="cat-chip" data-category="World History & Geography">
+                <span class="cat-icon">🌍</span>
+                <div class="cat-info">
+                  <span class="cat-name">History & Geo</span>
+                  <span class="cat-sub">World Knowledge</span>
+                </div>
+              </button>
+              <button class="cat-chip" data-category="Current Affairs & GK">
+                <span class="cat-icon">⚡</span>
+                <div class="cat-info">
+                  <span class="cat-name">Current Affairs</span>
+                  <span class="cat-sub">Global & Culture</span>
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <!-- Mode & Question Length -->
+          <div class="setup-card">
+            <div class="card-header">
+              <span class="section-badge">Step 2</span>
+              <h3>Game Mode & Size</h3>
+            </div>
+
+            <div class="mode-selector">
+              <label class="mode-option active">
+                <input type="radio" name="gameMode" value="blitz" checked>
+                <div class="mode-content">
+                  <div class="mode-top">
+                    <span class="mode-icon">⚡</span>
+                    <span class="mode-title">Blitz Mode</span>
+                    <span class="mode-badge">Popular</span>
+                  </div>
+                  <p class="mode-desc">15 seconds per question. Speed bonus points for fast reflexes!</p>
+                </div>
+              </label>
+
+              <label class="mode-option">
+                <input type="radio" name="gameMode" value="zen">
+                <div class="mode-content">
+                  <div class="mode-top">
+                    <span class="mode-icon">🧘</span>
+                    <span class="mode-title">Zen Mode</span>
+                  </div>
+                  <p class="mode-desc">Untimed. Take all the time you need to learn and think.</p>
+                </div>
+              </label>
+
+              <label class="mode-option">
+                <input type="radio" name="gameMode" value="survival">
+                <div class="mode-content">
+                  <div class="mode-top">
+                    <span class="mode-icon">❤️</span>
+                    <span class="mode-title">Survival Mode</span>
+                  </div>
+                  <p class="mode-desc">3 lives only! Game ends if you make 3 wrong choices.</p>
+                </div>
+              </label>
+            </div>
+
+            <div class="length-selector">
+              <label class="setting-label">Question Count:</label>
+              <div class="length-chips" id="lengthChips">
+                <button class="len-chip" data-count="5">5 Qs</button>
+                <button class="len-chip active" data-count="10">10 Qs</button>
+                <button class="len-chip" data-count="15">15 Qs</button>
+                <button class="len-chip" data-count="20">20 Qs</button>
+              </div>
+            </div>
+
+            <div class="confirm-setting">
+              <label class="toggle-switch-label">
+                <input type="checkbox" id="confirmToggleInput" checked>
+                <span class="toggle-slider"></span>
+                <span class="toggle-text">Confirm choice ("Are you sure?") before locking</span>
+              </label>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="lobby-footer">
+          <button id="startQuizBtn" class="btn-primary start-btn">
+            <span class="btn-text">Start Challenge</span>
+            <span class="btn-arrow">🚀</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- VIEW 2: QUIZ ARENA                           -->
+      <!-- ============================================ -->
+      <section id="quizView" class="view-panel">
+        
+        <!-- Arena HUD Bar -->
+        <div class="arena-hud">
+          <div class="hud-left">
+            <div class="hud-tag" id="hudCategoryTag">
+              <span id="hudCategoryIcon">🌟</span>
+              <span id="hudCategoryText">General</span>
+            </div>
+            <div class="hud-difficulty" id="hudDifficultyTag">Medium</div>
+          </div>
+
+          <div class="hud-center">
+            <div class="timer-wrapper" id="timerWrapper">
+              <div class="timer-circle">
+                <svg class="timer-svg" viewBox="0 0 36 36">
+                  <path class="timer-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                  <path id="timerProgress" class="timer-fill" stroke-dasharray="100, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                </svg>
+                <span id="timerText" class="timer-number">15</span>
+              </div>
+            </div>
+            <div class="lives-display hidden" id="livesDisplay">
+              <span class="heart-icon">❤️</span>
+              <span class="heart-icon">❤️</span>
+              <span class="heart-icon">❤️</span>
+            </div>
+          </div>
+
+          <div class="hud-right">
+            <div class="streak-badge" id="streakBadge">
+              <span class="streak-fire">🔥</span>
+              <span class="streak-text" id="streakText">Streak 0</span>
+            </div>
+            <div class="score-badge">
+              <span class="score-label">Score</span>
+              <span class="score-value" id="hudScore">0</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Linear Progress Bar -->
+        <div class="progress-container">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <div class="progress-meta">
+          <span id="progressQuestionNum">Question 1 of 10</span>
+          <span id="progressPercent">10%</span>
+        </div>
+
+        <!-- Question Card -->
+        <div class="question-card" id="questionCard">
+          <h2 class="question-prompt" id="questionText">Loading Question...</h2>
+
+          <!-- Lifelines Toolbar -->
+          <div class="lifelines-bar">
+            <span class="lifelines-label">Lifelines:</span>
+            <button id="lifeline5050" class="lifeline-btn" title="Remove 2 incorrect choices">
+              <span class="ll-icon">💡</span> 50:50
+            </button>
+            <button id="lifelineFreeze" class="lifeline-btn" title="Add 10 extra seconds">
+              <span class="ll-icon">⏱️</span> +10s Time
+            </button>
+          </div>
+
+          <!-- Multiple Choice Options -->
+          <div class="options-container" id="optionsContainer">
+            <!-- Dynamically populated buttons -->
+          </div>
+
+          <!-- Are You Sure? Confirmation Action Bar -->
+          <div class="confirmation-bar hidden" id="confirmationBar">
+            <div class="confirm-info">
+              <span class="confirm-icon">🤔</span>
+              <div class="confirm-labels">
+                <span class="confirm-title">Option <strong id="confirmSelectedKey">B</strong> selected.</span>
+                <span class="confirm-sub">Are you sure? Lock in your answer or pick another.</span>
+              </div>
+            </div>
+            <div class="confirm-actions">
+              <button id="cancelSelectionBtn" class="confirm-btn secondary" title="Change option">
+                <span>✏️</span> Change
+              </button>
+              <button id="confirmAnswerBtn" class="confirm-btn primary" title="Submit your choice">
+                <span>🔒</span> Confirm & Submit
+              </button>
+            </div>
+          </div>
+
+          <!-- Explanation / Feedback Banner (Shown after selection) -->
+          <div class="explanation-box hidden" id="explanationBox">
+            <div class="explanation-header">
+              <span id="feedbackStatusIcon">✅</span>
+              <span id="feedbackStatusTitle" class="feedback-title">Correct!</span>
+              <span id="pointsEarnedBadge" class="points-badge">+12 pts</span>
+            </div>
+            <p id="explanationText" class="explanation-body"></p>
+          </div>
+        </div>
+
+        <!-- Navigation Action Controls -->
+        <div class="quiz-controls">
+          <button id="prevQuestionBtn" class="control-btn secondary" disabled>
+            <span>⬅️</span> Previous
+          </button>
+          <button id="quitQuizBtn" class="control-btn danger">
+            <span>🚪</span> Quit Quiz
+          </button>
+          <button id="nextQuestionBtn" class="control-btn primary" disabled>
+            Next Question <span>➡️</span>
+          </button>
+        </div>
+
+      </section>
+
+      <!-- ============================================ -->
+      <!-- VIEW 3: RESULTS & ANALYTICS SCREEN           -->
+      <!-- ============================================ -->
+      <section id="resultsView" class="view-panel">
+        
+        <div class="results-card">
+          <div class="results-hero">
+            <div class="trophy-emblem" id="rankBadge">🏆</div>
+            <h2 class="results-title" id="resultsTitle">Quiz Complete!</h2>
+            <p class="results-subtitle" id="resultsSubtitle">Outstanding performance across all questions!</p>
+          </div>
+
+          <div class="final-score-display">
+            <span class="final-score-label">Final Score</span>
+            <span class="final-score-val" id="finalScoreVal">0</span>
+            <span class="final-score-max" id="maxPossibleScore">/ 100 max</span>
+          </div>
+
+          <div class="stats-summary-grid">
+            <div class="stat-card">
+              <div class="stat-icon">🎯</div>
+              <div class="stat-value" id="statAccuracy">0%</div>
+              <div class="stat-label">Accuracy</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">✅</div>
+              <div class="stat-value" id="statCorrect">0 / 0</div>
+              <div class="stat-label">Correct Answers</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">🔥</div>
+              <div class="stat-value" id="statMaxStreak">0</div>
+              <div class="stat-label">Max Streak</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">⚡</div>
+              <div class="stat-value" id="statRank">S-Rank</div>
+              <div class="stat-label">Mastery Tier</div>
+            </div>
+          </div>
+
+          <!-- Leaderboard Submit Form -->
+          <div class="submit-score-section">
+            <h4>Save Score to Leaderboard</h4>
+            <div class="submit-score-form">
+              <input type="text" id="playerNameInput" placeholder="Enter your player name..." maxlength="20" />
+              <button id="saveScoreBtn" class="btn-save">Submit 🏆</button>
+            </div>
+            <p id="saveStatus" class="save-status"></p>
+          </div>
+
+          <!-- Question Review Accordion -->
+          <div class="review-section">
+            <div class="review-header">
+              <h3>📝 Question-by-Question Review</h3>
+              <button id="toggleReviewBtn" class="btn-text">Expand Details ▼</button>
+            </div>
+            <div class="review-list hidden" id="reviewList">
+              <!-- Dynamically populated review items -->
+            </div>
+          </div>
+
+          <div class="results-actions">
+            <button id="playAgainBtn" class="btn-primary">
+              <span>🔄</span> Play Again
+            </button>
+            <button id="changeTopicBtn" class="btn-secondary">
+              <span>⚙️</span> Change Settings
+            </button>
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+
+    <!-- Leaderboard Modal -->
+    <div class="modal-backdrop hidden" id="leaderboardModal">
+      <div class="modal-card">
+        <div class="modal-header">
+          <div class="modal-title-group">
+            <span class="modal-icon">🏆</span>
+            <h3>Top Quiz Champions</h3>
+          </div>
+          <button class="modal-close" id="closeLeaderboardBtn">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="leaderboard-table-wrapper">
+            <table class="leaderboard-table">
+              <thead>
+                <tr>
+                  <th>Rank</th>
+                  <th>Player</th>
+                  <th>Topic</th>
+                  <th>Accuracy</th>
+                  <th>Score</th>
+                </tr>
+              </thead>
+              <tbody id="leaderboardTbody">
+                <!-- Dynamically filled -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <!-- Help Modal -->
+    <div class="modal-backdrop hidden" id="helpModal">
+      <div class="modal-card">
+        <div class="modal-header">
+          <div class="modal-title-group">
+            <span class="modal-icon">💡</span>
+            <h3>How to Play QuizVerse</h3>
+          </div>
+          <button class="modal-close" id="closeHelpBtn">&times;</button>
+        </div>
+        <div class="modal-body help-body">
+          <div class="help-item">
+            <span class="hi-icon">⚡</span>
+            <div>
+              <strong>Score & Streaks:</strong>
+              <p>Each correct answer earns 10 base points. Chain consecutive correct answers for hot Streak Bonus Multipliers!</p>
+            </div>
+          </div>
+          <div class="help-item">
+            <span class="hi-icon">⏱️</span>
+            <div>
+              <strong>Blitz Timer & Speed Bonus:</strong>
+              <p>In Blitz Mode, answering within the first few seconds gives you up to +5 Speed Bonus Points.</p>
+            </div>
+          </div>
+          <div class="help-item">
+            <span class="hi-icon">💡</span>
+            <div>
+              <strong>Lifelines:</strong>
+              <p>Use the <strong>50:50</strong> lifeline to eliminate two incorrect choices, or <strong>+10s</strong> to freeze time.</p>
+            </div>
+          </div>
+          <div class="help-item">
+            <span class="hi-icon">⌨️</span>
+            <div>
+              <strong>Keyboard Friendly:</strong>
+              <p>Press <kbd>1</kbd>, <kbd>2</kbd>, <kbd>3</kbd>, <kbd>4</kbd> or <kbd>A</kbd>, <kbd>B</kbd>, <kbd>C</kbd>, <kbd>D</kbd> on your keyboard to instantly select options, and <kbd>Enter</kbd> to proceed!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
-  <!-- Result Page -->
-  <div id="result" class="hidden">
-    <h2>Quiz Ended!</h2>
-    <p id="finalScore"></p>
-    <button id="restartBtn">Restart Quiz</button>
-  </div>
-
-</div>
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

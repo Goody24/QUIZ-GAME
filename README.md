@@ -1,97 +1,101 @@
-# Quiz Game Project
+# ⚡ QuizVerse - Knowledge Arena
 
-A **web-based Quiz Game** built with **Node.js** for the backend and vanilla **HTML/CSS/JS** for the frontend.
-The quiz includes **Mathematics, English, and Current Affairs** questions with multiple-choice options, score tracking, and interactive navigation.
+A state-of-the-art, gamified **Quiz Game Web Application** built with **Node.js/Express** on the backend and **Vanilla HTML5, CSS3 & JavaScript** on the frontend.
 
----
-
-## Features
-
-* Intro page with quiz instructions.
-* 20 questions spanning **Mathematics, English, and Current Affairs**.
-* Multiple-choice options for each question.
-* **Next / Previous navigation** between questions.
-* Immediate feedback on answer selection (correct/wrong + correct answer).
-* Score tracking (5 points per correct answer).
-* Quit and restart options.
-* Fully responsive and styled frontend.
+Features a modern cyber-glass aesthetic, Web Audio API sound synthesis, canvas celebration confetti, multi-category question banks with detailed explanations, streak combos, and interactive analytics.
 
 ---
 
-## Project Structure
+## 🌟 Key Features
+
+* 🎮 **3 Game Modes**:
+  * **⚡ Blitz Mode**: 15-second countdown timer per question with speed bonus scoring!
+  * **🧘 Zen Mode**: Untimed, pressure-free quiz to learn and explore at your pace.
+  * **❤️ Survival Mode**: 3-Lives sudden death challenge.
+* 📚 **72+ Verified Questions with Explanations across 6 Categories**:
+  * 🧮 **Mathematics** (Arithmetic, Algebra, Geometry, Logic)
+  * 📖 **English & Vocabulary** (Grammar, Idioms, Antonyms & Synonyms)
+  * 🔬 **Science & Nature** (Physics, Chemistry, Biology, Astronomy)
+  * 💻 **Technology & Computing** (Programming, Hardware, Web, AI)
+  * 🌍 **World History & Geography** (Civilizations, Capitals, Landmarks)
+  * ⚡ **Current Affairs & General Knowledge** (Culture, Sports, Global Records)
+* 💡 **Lifelines**:
+  * **50:50**: Strips away 2 incorrect choices.
+  * **+10s Freeze**: Freezes time and adds extra seconds in Blitz mode.
+* 🔥 **Streak & Combo Multipliers**: Consecutively answer correctly to boost your score with exponential streak fire bonuses.
+* 🔊 **Web Audio Synthesizer**: Built-in sound effects (correct chimes, wrong buzzers, countdown ticks, victory fanfares) with instant mute toggle.
+* 🎊 **Canvas Confetti & Trophy Ranks**: S-Rank Grandmaster, A-Rank Scholar, B-Rank Challenger with particle fireworks.
+* 📝 **Question-by-Question Review**: Comprehensive post-game review revealing your answers, correct answers, and educational explanations.
+* 🏆 **Leaderboard**: High-score tracking with accuracy rating and topic breakdown.
+* ⌨️ **Full Keyboard Shortcuts**: Use `A`-`D` or `1`-`4` to pick options, `Enter` / `ArrowRight` to advance.
+
+---
+
+## 📁 Project Structure
 
 ```
-project/
-├─ frontend/
-│  ├─ index.html       # Main HTML page
-│  ├─ style.css        # Styling
-│  └─ script.js        # Frontend logic
-├─ server.js           # Node.js backend server
-├─ questions.json      # Quiz questions in JSON format
-└─ README.md           # Project documentation
+QUIZ-GAME/
+├── frontend/
+│   ├── index.html       # Modern semantic markup & view panels
+│   ├── style.css        # Cyber-glass design system & micro-interactions
+│   └── script.js        # Web Audio, confetti, HUD, and game state controller
+├── server.js            # Express server with RESTful API & session tracking
+├── questions.json       # 72+ verified questions database with explanations
+├── package.json         # Project metadata and dependencies
+└── README.md            # Documentation
 ```
 
 ---
 
-## Setup & Installation
+## 🚀 Getting Started
 
-1. **Clone the repository** (or create a project folder).
+### 1. Prerequisites
+- **Node.js** (v18 or higher recommended)
 
-2. **Navigate to the project folder**:
-
+### 2. Installation
+Clone the repository and install dependencies:
 ```bash
-cd project
+npm install
 ```
 
-3. **Install Node.js dependencies**:
-
+### 3. Running the Server
+Start the Express server:
 ```bash
-npm init -y
-npm install express cors
+npm start
 ```
-
-4. **Make sure `questions.json` exists** in the root folder.
-
-5. **Start the backend server**:
-
+Or directly with Node:
 ```bash
 node server.js
 ```
 
-You should see:
-
+You will see:
 ```
-Quiz server running on port 5000
+Loaded 72 questions across multiple categories.
+Quiz server running at http://localhost:5000
 ```
 
-6. **Open the frontend** in your browser:
-
-* Go to: [http://localhost:5000](http://localhost:5000)
-* You should see the intro page and can start the quiz.
-
----
-
-## How It Works
-
-1. User sees an **intro page** with instructions.
-2. Clicking **Start Quiz** loads the first question.
-3. Users can select an answer:
-
-   * Feedback shows **Correct ✅** or **Wrong ❌** with the correct answer.
-4. Navigate using **Next** and **Previous** buttons.
-5. Users can **Quit** anytime to see their **final score**.
-6. Users can **Restart Quiz** after finishing.
+### 4. Play the Quiz
+Open your browser and navigate to:
+```
+http://localhost:5000
+```
 
 ---
 
-## Technologies Used
+## 🔌 API Endpoints
 
-* **Backend:** Node.js, Express, CORS
-* **Frontend:** HTML, CSS, JavaScript
-* **Data:** JSON file (`questions.json`) storing quiz questions
+| Method | Endpoint | Description |
+|---|---|---|
+| `GET` | `/api/categories` | Returns all available categories and question counts |
+| `GET` | `/api/quiz?category=...&count=10` | Generates a randomized quiz question set |
+| `GET` | `/api/question/random` | Returns a random question |
+| `POST` | `/api/answer` | Validates answer, computes streak bonus & returns explanation |
+| `GET` | `/api/session/state?session=...` | Retrieves session summary & accuracy stats |
+| `GET` | `/api/leaderboard` | Returns top high scores |
+| `POST` | `/api/leaderboard` | Submits new high score |
 
 ---
 
-## License
+## 📜 License
 
-This project is open-source and free to use.
+Open source and free to use under the ISC License.
